@@ -24,20 +24,20 @@ There are Pact implementations written in more than 10 languages (see the sideba
 
 | Language          | Repository            | support | version                                                                         |
 | ----------------- | --------------------- | ------- | ------------------------------------------------------------------------------- |
-| Java              | [Pact-JVM]            | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four] |
-| JavaScript        | [Pact-JS]             | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four] |
-| Ruby              | [Pact-Ruby]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                          |
-| .NET              | [Pact-.NET]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three]                     |
-| Go                | [Pact-Go]             | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four] |
-| PHP               | [Pact-PHP]            | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four] |
-| Python            | [Pact-Python]         | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                          |
-| Python            | [Pactman]             | 🗑🫂     | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                          |
-| Swift/Objective-C | [PactSwift]           | ✅🫂    | [3️⃣][pact-spec-three]                                                           |
-| Swift/Objective-C | [pact-consumer-swift] | 🗑🫂     | [2️⃣][pact-spec-two]                                                             |
-| Scala             | [Scala-Pact]          | 🗑🫂     | [2️⃣][pact-spec-two]                                                             |
-| Scala             | [pact4s]              | ✅🫂    | [3️⃣][pact-spec-three][4️⃣][pact-spec-four]                                       |
-| Rust              | [Pact-Rust]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four] |
-| C++               | [Pact-C++]            | ✅🔗    | [3️⃣][pact-spec-three]                                                           |
+| Java              | [Pact-JVM]            | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| JavaScript        | [Pact-JS]             | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| Ruby              | [Pact-Ruby]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                           |
+| .NET              | [Pact-.NET]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| Go                | [Pact-Go]             | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| PHP               | [Pact-PHP]            | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| Python            | [Pact-Python]         | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                           |
+| Python            | [Pactman]             | 🗑🫂    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two]                                           |
+| Swift/Objective-C | [PactSwift]           | ✅🫂    | [3️⃣][pact-spec-three]                                                            |
+| Swift/Objective-C | [pact-consumer-swift] | 🗑🫂    | [2️⃣][pact-spec-two]                                                              |
+| Scala             | [Scala-Pact]          | 🗑🫂    | [2️⃣][pact-spec-two]                                                              |
+| Scala             | [pact4s]              | ✅🫂    | [3️⃣][pact-spec-three][4️⃣][pact-spec-four]                                        |
+| Rust              | [Pact-Rust]           | ✅🔗    | [1️⃣][pact-spec-one][2️⃣][pact-spec-two][3️⃣][pact-spec-three][4️⃣][pact-spec-four]   |
+| C++               | [Pact-C++]            | ✅🔗    | [3️⃣][pact-spec-three]                                                            |
 
 [Pact-JVM]: https://github.com/pact-foundation/pact-jvm
 [Pact-JS]: https://github.com/pact-foundation/pact-js
@@ -145,4 +145,4 @@ There are Pact implementations written in more than 10 languages (see the sideba
 | Linux | x86_64       | ✅        |
 | Linux | arm64        | ✅        |
 
-## Direct Download
+<!--- ## Direct Download --->
