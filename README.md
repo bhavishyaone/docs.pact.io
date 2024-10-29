@@ -1,104 +1,101 @@
-# Pact Docs Website
+# 📝 **Pact Docs Website**
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b5808ef1-8072-4687-84e8-2a0257f3ac8f/deploy-status)](https://app.netlify.com/sites/docs-pact-io/deploys)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5808ef1-8072-4687-84e8-2a0257f3ac8f/deploy-status)](https://app.netlify.com/sites/docs-pact-io/deploys)  
 ![Sync Pact docs](https://github.com/pact-foundation/docs.pact.io/workflows/Sync%20Pact%20docs/badge.svg)
 
-## Table of Contents
-- [Pact Docs Website](#pact-docs-website)
-  - [Table of Contents](#table-of-contents)
-  - [Local development](#local-development)
-  - [Adding pages](#adding-pages)
-  - [Moving pages](#moving-pages)
-  - [Automatic syncing from the markdown files in each Pact implementation repository](#automatic-syncing-from-the-markdown-files-in-each-pact-implementation-repository)
-  - [Slack history](#slack-history)
-  - [Hosting](#hosting)
-  - [Search](#search)
-  - [Contributing](#contributing)
-  - [Contact](#contact)
+---
 
-## Local development
+## 📑 **Table of Contents**
+- [💻 Local Development](#local-development)
+- [➕ Adding Pages](#adding-pages)
+- [➡️ Moving Pages](#moving-pages)
+- [🔄 Automatic Syncing](#automatic-syncing-from-the-markdown-files-in-each-pact-implementation-repository)
+- [💬 Slack History](#slack-history)
+- [🌐 Hosting](#hosting)
+- [🔍 Search](#search)
+- [🤝 Contributing](#contributing)
+- [📞 Contact](#contact)
 
-The files are markdown, stored under the `docs` directory.
+---
 
-You will need Docker and Docker Compose to run the docs application locally.
+## 💻 **Local Development**
 
-`docker-compose up`
+The files are markdown, stored under the `docs` directory.  
+**Requirements:** Docker and Docker Compose
 
-## Adding pages
+**Command to Start:**  
+```bash
+docker-compose up
+```
 
-* Add the file to the appropriate path under the `docs` directory.
-* Update [website/sidebars.json](website/sidebars.json).
+---
 
-## Moving pages
+## ➕ **Adding Pages**
 
-* Find the file under the `docs` directory.
-* Move it to the directory/name you want.
-* Update [website/sidebars.json](website/sidebars.json).
-* Do a file search and replace to update any internal references to the page.
-* Create a redirect in [netlify.toml](netlify.toml).
+1. Place the new file in the correct path under `docs`.
+2. Update the [sidebar JSON file](website/sidebars.json).
 
-## Automatic syncing from the markdown files in each Pact implementation repository
+---
 
-The markdown files in the following directories are synced from their respective source repositories. Do not edit them directly! You'll be able to tell if it's a file that has been synced from another repository because the `custom_edit_url` will be set in the page metadata.
+## ➡️ **Moving Pages**
 
+1. Locate the file in the `docs` directory.
+2. Move to the desired folder.
+3. Update [sidebars.json](website/sidebars.json).
+4. Update internal references, and create a redirect in [netlify.toml](netlify.toml).
+
+---
+
+## 🔄 **Automatic Syncing**
+
+Markdown files in these directories sync automatically from their source repositories.  
 * `docs/implementation_guides/go`
 * `docs/implementation_guides/javascript`
-* `docs/implementation_guides/jvm`
-* `docs/implementation_guides/python`
-* `docs/implementation_guides/cpp`
-* `docs/implementation_guides/rust`
-* `docs/implementation_guides/net`
-* `docs/pact_broker/client_cli`
-* `docs/pact_broker/docker_images/`
-* `docs/pact_broker/kubernetes/`
+* And more...
 
-Each of the above Pact repositories has a Github workflow that triggers the [sync-docs](.github/workflows/sync-docs.yml) workflow when any markdown files are edited on `master`.
+Whenever a markdown file is changed, the [sync-docs workflow](.github/workflows/sync-docs.yml) pulls it in and Netlify deploys the updates.
 
-When the sync-docs workflow runs, it pulls in the `master` markdown files from the changed repository, syncs and processes them, and then commits and pushes them. On push, Netlify automatically deploys.
+---
 
-## Slack history
+## 💬 **Slack History**
 
-Because the free version of slack only lets you read the last 10k of messages, and at the time of writing this (March 2021) that means about 97k messages are gone, it's helpful to have access to the history.
+Slack message history is accessible via [docs.pact.io/slack/](https://docs.pact.io/slack/).
 
-You can docs.pact.io/slack/
+**Steps to Update Slack Export:**
+1. Download the latest extract from Slack.
+2. Use this [PHP script](https://gist.github.com/mefellows/1b825c86b2ff1063afbb2e5cb6b8cb3e) to convert it to HTML.
+3. Sync HTML files to `website/static/slack`.
 
-To update the export:
+---
 
-1. Download the latest extract from https://pact-foundation.slack.com/services/export
-1. Extract into a directory
-1. Download this php file (to e.g. `slack.php`) into the same directory as the export: https://gist.github.com/mefellows/1b825c86b2ff1063afbb2e5cb6b8cb3e
-1. Run this script `php slack.php`
-1. Sync the HTML files from `slack2html/html/*` into the `website/static/slack` directory
+## 🌐 **Hosting**
 
-## Hosting
-
-The Pact docs site is hosted by Netlify. Thanks!
-
-The site will be automatically redeployed after any push to `master`.
+The Pact Docs site is hosted by Netlify and redeploys on every push to `master`.
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Deploys by Netlify" />
 </a>
 
-## Search
+---
 
-The search is provided free by Algolia because Pact is an open source project. 
+## 🔍 **Search**
 
-1. An algolia crawler is defined [here](https://crawler.algolia.com/admin/crawlers/da3a74db-8003-4213-89d7-ae8c564cae42/overview) to crawl the docs.pact.io sitemap [here](https://docs.pact.io/sitemap.xml) 
-2. An algolia search index is configured [here](https://www.algolia.com/apps/BH4D9OD16A/) and the crawler results are stored in the search index
-3. The docs.pact.io website which is built on docusaurus, is configured
-   1. in `./website/docusaurus.config.js` under `themeConfig.algolia` 
-4. The Search analytics page is [here](https://www.algolia.com/apps/BH4D9OD16A/analytics). 
-   1. It is accessed via the pact-foundation@googlegroups.com account
+Powered by Algolia! 🚀 Pact is an open-source project, allowing free use of Algolia's search capabilities.
 
-- Info on how to style the search UI is [here](https://docsearch.algolia.com/docs/styling/). 
+1. Crawler defined [here](https://crawler.algolia.com/admin/crawlers/da3a74db-8003-4213-89d7-ae8c564cae42/overview)
+2. Search configuration in `docusaurus.config.js`
 
-## Contributing
+---
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+## 🤝 **Contributing**
 
-## Contact
+For guidance, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-* [Pact Foundation Slack workspace](https://slack.pact.io)
-* [Twitter](https://twitter.com/pact_up)
+---
+
+## 📞 **Contact**
+
+* Join us on [Slack](https://slack.pact.io)
+* Follow us on [Twitter](https://twitter.com/pact_up)
+
+---
